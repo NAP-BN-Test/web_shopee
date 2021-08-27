@@ -2,6 +2,8 @@
   --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
+  --primary-color: #f63e2e;
+  --border-color: #dbdbdb;
 }
 
 * {
@@ -29,4 +31,55 @@ html {
 .grid__row {
   display: flex;
   flex-wrap: wrap;
+}
+
+.mr8 {
+  margin-right: 8px !important;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button style */
+.btn {
+  min-width: 142px;
+  height: 36px;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.btn--normal:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn--size-s {
+  height: 32px;
+  font-size: 1.2rem;
+}
+
+.btn.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn.btn--disabled {
+  cursor: default;
+  background-color: #c3c3c3;
+  color: #949494;
 }

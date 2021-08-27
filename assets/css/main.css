@@ -99,6 +99,9 @@
 }
 
 /* Header notification */
+.navbar-item--has-notify:hover .notify {
+  display: block;
+}
 
 .notify {
   position: absolute;
@@ -108,11 +111,37 @@
   right: 0;
   border: 1px solid #d3d3d3;
   margin-top: 10px;
+  transform-origin: 90% top;
+  animation: headerNotify ease-in 0.3s;
+  /* tối ưu chuyển động, khai báo sự thay đổi trong keyframes */
+  will-change: opacity, transform;
+  display: none;
+}
+
+.notify::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: 0px;
+  border: 50px solid;
+  border-color: transparent transparent white transparent;
+}
+
+@keyframes headerNotify {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .notify-header {
   height: 40px;
   background-color: var(--white-color);
+  cursor: default;
 }
 
 .notify-header h3 {
@@ -126,21 +155,29 @@
 .notify-list {
   padding: 0 0 0 12px;
 }
+
 .notify-item {
+  padding-bottom: 12px;
+  background-color: rgba(238, 75, 43, 0.08);
 }
+
+.notify-item:hover {
+  background-color: #fff;
+}
+
 .notify-link {
   display: flex;
   text-decoration: none;
-  background-color: rgba(238, 75, 43, 0.08);
   width: 100%;
 }
 .notify-img {
   width: 48px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .notify-info {
   margin-left: 12px;
+  padding: 4px;
 }
 
 .notify-info .name {
@@ -159,12 +196,136 @@
 .notify-descript {
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.notify-footer {
+}
+
+.notify-footer-btn {
+  padding: 8px;
+  text-decoration: none;
+  color: var(--black-color);
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Modal register */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+  background-color: var(--white-color);
+  margin: auto;
+  position: relative;
+  border-radius: 5px;
+}
+
+.modal__inner {
+  padding: 16px 32px;
+}
+
+.auth-form {
+  width: 450px;
+}
+
+.auth-from__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-from__heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.auth-from__switch-btn {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  align-self: center;
+  cursor: pointer;
+}
+
+.auth-form__input {
+  width: 100%;
+  height: 40px;
+  margin-top: 16px;
+  padding: 0 12px;
+  font-size: 1.4rem;
+  border-color: var(--border-color);
+  border-radius: 3px;
+  outline: none;
+  border-width: 1px;
+}
+
+.auth-form__input:focus {
+  border-color: #555;
+}
+
+.auth-form__aside {
+  margin-top: 18px;
+}
+
+.auth-form__policy-text {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+.auth-form__policy-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.auth-form__controls {
+  margin-top: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.auth-form__socials {
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.auth-form__socials a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-form__socials-icon-facebook {
+  background-color: #3a5a98;
+  color: var(--white-color);
+  padding: 0 8px;
+}
+
+.auth-form__socials-icon-google {
+  padding: 0 8px;
+  background-color: var(--white-color);
+}
+
+.auth-form__socials-icon-facebook i,
+.auth-form__socials-icon-google i {
+  font-size: 1.8rem;
+}
+
+.auth-form__socials-icon-facebook span,
+.auth-form__socials-icon-google span {
+  padding: 0 24px;
 }
