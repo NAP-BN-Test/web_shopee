@@ -47,6 +47,20 @@ html {
   }
 }
 
+@keyframes growth {
+  from {
+    transform: scale(var(--growth-from));
+  }
+  to {
+    transform: scale(var(--growth-to));
+  }
+}
+
+/* Text Style */
+.text-color-primary {
+  color: var(--primary-color) !important;
+}
+
 /* Button style */
 .btn {
   min-width: 142px;
