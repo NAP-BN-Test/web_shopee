@@ -191,9 +191,55 @@
                 class="logo-img"
               />
             </div>
-            <div class="search"></div>
+            <div class="search">
+              <div class="search-input-wrap">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Nhập để tìm kiếm"
+                  class="search-input"
+                />
+                <!-- Search history -->
+                <div class="search-history">
+                  <h3>Lịch sử tìm kiếm</h3>
+                  <ul class="search-history-list">
+                    <li class="search-history-item">
+                      <a href="">Kem dưỡng da</a>
+                    </li>
+                    <li class="search-history-item">
+                      <a href="">Kem trị mụn</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="search-select">
+                <span class="select-label">Trong shop</span>
+                <i class="fa fa-angle-down select-icon"></i>
+                <ul class="search-option">
+                  <li class="search-option-item search-option-item--active">
+                    Trong shop <i class="fas fa-check"></i>
+                  </li>
+                  <li class="search-option-item">
+                    Ngoài shop <i class="fas fa-check"></i>
+                  </li>
+                </ul>
+              </div>
+              <button class="search-btn">
+                <i class="search-btn-icon fas fa-search"></i>
+              </button>
+            </div>
             <div class="cart">
               <i class="cart-icon fas fa-shopping-cart"></i>
+              <div class="cart-list cart-list--no-cart">
+                <img
+                  src="/assets/img/no-cart.png"
+                  alt=""
+                  class="cart-no-cart-img"
+                />
+                <span class="no-cart-label">Chưa có sản phẩm</span>
+              </div>
             </div>
           </div>
         </div>
