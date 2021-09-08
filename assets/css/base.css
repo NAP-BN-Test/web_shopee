@@ -54,8 +54,20 @@ html {
   width: 83.3334%;
 }
 
+.mt48 {
+  margin-top: 48px !important;
+}
+
 .mr8 {
   margin-right: 8px !important;
+}
+
+.mb10 {
+  margin-bottom: 10px !important;
+}
+
+.mb32 {
+  margin-bottom: 32px !important;
 }
 
 /* Animation */
@@ -160,6 +172,7 @@ html {
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.04);
   display: none;
+  z-index: 1;
 }
 
 .select-input__list::before {
