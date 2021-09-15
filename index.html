@@ -13,7 +13,9 @@
       href="/assets/fonts/fontawesome-free-5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/grid.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/reponsive.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
@@ -23,8 +25,8 @@
   <body>
     <div class="app">
       <div class="header">
-        <div class="grid">
-          <div class="navbar">
+        <div class="grid wide">
+          <div class="navbar hide-on-mobile-tablet">
             <ul class="navbar-list">
               <li class="navbar-item navbar-item--separate navbar-item--has-qr">
                 Vào cửa hàng trên ứng dụng TickID
@@ -352,7 +354,7 @@
       </div>
 
       <div class="app__container">
-        <div class="grid">
+        <div class="grid wide">
           <div class="grid__row">
             <div class="grid__column-2">
               <div class="category">
@@ -375,7 +377,7 @@
               </div>
             </div>
             <div class="grid__column-10">
-              <div class="home-filter">
+              <div class="home-filter hide-on-mobile-tablet">
                 <span class="home-filter__label">Sắp xếp theo</span>
                 <button class="home-filter__btn btn">Phổ biến</button>
                 <button class="home-filter__btn btn btn--primary">
@@ -1438,7 +1440,7 @@
       </div>
 
       <footer class="footer">
-        <div class="grid">
+        <div class="grid wide">
           <div class="grid__row">
             <div class="grid__column-2-4">
               <h3 class="footer__heading">Chăm sóc khách hàng</h3>
