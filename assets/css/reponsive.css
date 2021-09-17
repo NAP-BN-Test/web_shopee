@@ -6,6 +6,11 @@
 
   .header {
     height: 84px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
   }
 
   .logo-img {
@@ -26,6 +31,38 @@
 
   .cart-item-info {
     padding-right: 0;
+  }
+
+  .cart-heading {
+    padding-left: 0;
+  }
+
+  .cart-review {
+    margin: 0 0px 12px 0;
+  }
+
+  .app__container {
+    margin-top: 84px;
+  }
+
+  .sort-bar {
+    display: flex;
+  }
+  .sort-item {
+  }
+  .sort-link {
+  }
+
+  .category-item--active .category-item__link::before {
+    display: none;
+  }
+
+  .category-item__link {
+    padding: 8px 12px;
+  }
+
+  .category-item--active .category-item__link {
+    right: 0px;
   }
 }
 
@@ -50,5 +87,9 @@
 @media (max-width: 739px) {
   .hide-on-mobile {
     display: none;
+  }
+
+  .nav_bars-btn {
+    display: block;
   }
 }

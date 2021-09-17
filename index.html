@@ -206,6 +206,31 @@
             </ul>
           </div>
           <div class="header-with-search">
+            <label for="nav-mobile-input" class="nav_bars-btn">
+              <i class="menu-mobile-icon fas fa-bars"></i>
+            </label>
+
+            <input
+              type="checkbox"
+              name=""
+              class="nav__input"
+              id="nav-mobile-input"
+            />
+
+            <div class="nav__overlay"></div>
+
+            <nav class="nav_mobile">
+              <div class="nav_mobile-close">
+                <i class="nav_mobile-close fas fa-times"></i>
+              </div>
+              <ul class="nav_mobile-list">
+                <li><a class="nav_mobile-link" href="#">Item 1</a></li>
+                <li><a class="nav_mobile-link" href="#">Item 2</a></li>
+                <li><a class="nav_mobile-link" href="#">Item 3</a></li>
+                <li><a class="nav_mobile-link" href="#">Item 4</a></li>
+              </ul>
+            </nav>
+
             <div class="logo">
               <img
                 src="https://assets.manutd.com/AssetPicker/images/0/0/3/2/197240/Header-Logo1500994616801.png"
@@ -213,7 +238,7 @@
                 class="logo-img"
               />
             </div>
-            <div class="search">
+            <div class="search hide-on-mobile">
               <div class="search-input-wrap">
                 <input
                   type="text"
@@ -351,6 +376,14 @@
             </div>
           </div>
         </div>
+        <ul class="sort-bar">
+          <li class="sort-item"><a href="#" class="sort-link">Liên quan</a></li>
+          <li class="sort-item sort-item--active">
+            <a href="#" class="sort-link">Mới nhất</a>
+          </li>
+          <li class="sort-item"><a href="#" class="sort-link">Bán chạy</a></li>
+          <li class="sort-item"><a href="#" class="sort-link">Giá</a></li>
+        </ul>
       </div>
 
       <div class="app__container">
@@ -359,7 +392,7 @@
             <div class="grid__column-2">
               <div class="category">
                 <h3 class="category__heading">
-                  <i class="fas fa-list"></i>
+                  <i class="fas fa-list hide-on-mobile-tablet"></i>
                   Danh mục
                 </h3>
 
