@@ -143,4 +143,18 @@
     position: fixed;
     top: 128px;
   }
+
+  .pagination-item {
+    margin: 0;
+  }
+
+  .pagination-item__link {
+    min-width: 36px;
+    --height: 28px;
+    font-size: 1.2rem;
+  }
+
+  .content {
+    margin: 0 4px;
+  }
 }
