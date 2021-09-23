@@ -157,4 +157,12 @@
   .content {
     margin: 0 4px;
   }
+
+  .mobile-category {
+    display: block;
+  }
+
+  .footer-mobile-content {
+    padding: 0 16px;
+  }
 }
